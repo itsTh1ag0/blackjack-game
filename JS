@@ -1,1 +1,27 @@
+///             blackjackGame           ///
+
+const firstCard = Math.ceil(Math.random() * 10) + 1
+const secondCard = Math.floor(Math.random() * 10) + 2;
+let sumOfCards = firstCard + secondCard
+let hasBlackJack = null;
+var gameOn = true
+var messageToUser = "";
+
+function startGame() {
+    if (sumOfCards <= 20) {
+        messageToUser = 'Do you want to draw another card?'
+    } else if (sumOfCards === 21) {
+        messageToUser = "Congrats, you've got a BlackJack";
+        hasBlackJack = true
+    } else {
+        messageToUser = 'Sorry. Game Over!'
+        gameOn = null;
+        break
+    }
+
+    return hasBlackJack ? console.log(messageToUser) : startGame();
+}
+
+const buttonEl = document.getElementsByClassName("btn-start")
+buttonEl.addEventListener('dblclick', startGame(), false);
 
