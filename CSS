@@ -1,0 +1,22 @@
+/* CSS */
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: oblique;
+}
+
+.btn-start {
+    text-align: center;
+    font-weight: bolder;
+    color: #016f32;
+    width: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #333;
+    background-color: rgb(255, 250, 200);
+    border: none;
+    border-radius: 10px;
+}
